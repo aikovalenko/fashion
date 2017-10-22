@@ -1,0 +1,165 @@
+@import "helpers/variables";
+@import "helpers/functions";
+@import "helpers/mixins";
+@import "helpers/placeholders";
+
+
+@import "partials/fonts";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/footer";
+
+
+//@include fontFace('GMText','../fonts/GMTextItalic', 400, italic);
+
+//@include fontFace('icomoon','../fonts/icomoon', 400);
+
+html {
+  font-size: 100%;
+  //font-family: 'GMTypewriter', Arial, sans-serif;
+}
+
+.cap {
+
+  height: 100%;
+  width: 100%;
+
+  overflow: hidden;
+
+  body {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__logo {
+    position: absolute;
+    width: 174px;
+    height: 174px;
+    //margin-top: 156px;
+    top: 13%;
+    //margin-left: 147px;
+    left: 30.8%;
+    z-index: 3;
+
+    img {
+      position: absolute;
+      right: 0;
+    }
+
+  }
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+}
+
+.square {
+  width: 174px;
+  height: 174px;
+
+  &-1 {
+    x: 74.3%;
+    y: 13%;
+  }
+  &-2 {
+    x: 74.3%;
+    y: 62.3%;
+  }
+  &-3 {
+    x: 30.8%;
+    y: 62.3%;
+  }
+}
+
+//менее 1200
+@media screen and (max-width: em(1200px, 16px)) {
+  .cap {
+
+    &__logo {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      //margin-top: 156px;
+      top: 13%;
+      //margin-left: 147px;
+      left: 40.8%;
+      z-index: 3;
+
+      img {
+        position: absolute;
+        right: 0;
+        height: 150px;
+      }
+
+    }
+    &__overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+  }
+  .square {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+
+
+    &-1 {
+      x: 74.3%;
+      y: 13%;
+      animation: blink 10s infinite ease;
+      //animation-delay: 1s;
+    }
+    &-2 {
+      x: 74.3%;
+      y: 52.3%;
+      animation: blink 10s infinite ease;
+      animation-delay: 2s;
+    }
+    &-3 {
+      x: 40.8%;
+      y: 52.3%;
+      animation: blink 10s infinite ease;
+      animation-delay: 3s;
+    }
+  }
+}
+
+//менее 768
+@media screen and (max-width: em(768px, 16px)) {
+  .cap {
+
+    &__logo {
+      position: static;
+      width: auto;
+      height: auto;
+      margin-top: 100px;
+      margin-left: 20px;
+      margin-right: 20px;
+
+      img {
+        position: static;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+      }
+    }
+    &__overlay {
+      display: none;
+    }
+  }
+}
+
+
+@keyframes blink {
+  0% {opacity: 0;}
+  25% {opacity: 1;}
+  50% {opacity: 0;}
+  75% {opacity: 1;}
+  100% {opacity: 0;}
+}
