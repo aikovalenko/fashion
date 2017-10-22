@@ -64,14 +64,19 @@ html {
   &-1 {
     x: 74.3%;
     y: 13%;
+    animation: blink 10s infinite ease;
   }
   &-2 {
     x: 74.3%;
     y: 62.3%;
+    animation: blink 10s infinite ease;
+    animation-delay: 2s;
   }
   &-3 {
     x: 30.8%;
     y: 62.3%;
+    animation: blink 10s infinite ease;
+    animation-delay: 3s;
   }
 }
 
@@ -112,20 +117,14 @@ html {
     &-1 {
       x: 74.3%;
       y: 13%;
-      animation: blink 10s infinite ease;
-      //animation-delay: 1s;
     }
     &-2 {
       x: 74.3%;
       y: 52.3%;
-      animation: blink 10s infinite ease;
-      animation-delay: 2s;
     }
     &-3 {
       x: 40.8%;
       y: 52.3%;
-      animation: blink 10s infinite ease;
-      animation-delay: 3s;
     }
   }
 }
@@ -155,11 +154,3 @@ html {
   }
 }
 
-
-@keyframes blink {
-  0% {opacity: 0;}
-  25% {opacity: 1;}
-  50% {opacity: 0;}
-  75% {opacity: 1;}
-  100% {opacity: 0;}
-}
