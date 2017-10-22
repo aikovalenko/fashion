@@ -60,6 +60,7 @@ html {
 .square {
   width: 174px;
   height: 174px;
+  opacity: 0;
 
   &-1 {
     x: 74.3%;
@@ -111,7 +112,6 @@ html {
   .square {
     width: 150px;
     height: 150px;
-    opacity: 0;
 
 
     &-1 {
@@ -154,3 +154,11 @@ html {
   }
 }
 
+
+@keyframes blink {
+  0% {opacity: 0;}
+  25% {opacity: 1;}
+  50% {opacity: 0;}
+  75% {opacity: 1;}
+  100% {opacity: 0;}
+}
