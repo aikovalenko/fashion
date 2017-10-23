@@ -36,6 +36,8 @@ html
 {
     position: absolute;
     right: 0;
+
+    height: 342px;
 }
 .cap__overlay
 {
@@ -98,7 +100,7 @@ html
         position: absolute;
         right: 0;
 
-        height: 150px;
+        height: 293px;
     }
     .cap__overlay
     {
