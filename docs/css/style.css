@@ -3,7 +3,13 @@
 /* queries */
 html
 {
+    font-family: 'Open Sans', sans-serif; 
     font-size: 100%;
+}
+
+p
+{
+    margin: 0;
 }
 
 .cap
@@ -45,6 +51,28 @@ html
     z-index: 2; 
     top: 0;
     left: 0;
+}
+.cap__info
+{
+    font-size: 20px; 
+
+    position: absolute;
+    z-index: 99;
+    top: 62.3%;
+    left: -webkit-calc(30.8% + 190px);
+    left:         calc(30.8% + 190px);
+}
+.cap__info p
+{
+    line-height: 30px;
+}
+.cap__info__dev
+{
+    margin-bottom: 10px;
+}
+.cap__info__name
+{
+    margin-bottom: 10px;
 }
 
 .square
@@ -109,6 +137,11 @@ html
         top: 0;
         left: 0;
     }
+    .cap__info
+    {
+        top: 37.3%; 
+        left: 41.8%;
+    }
     .square
     {
         width: 150px;
@@ -135,7 +168,8 @@ html
 {
     .cap__logo
     {
-        position: static;
+        top: 0;
+        left: 0;
 
         width: auto;
         height: auto;
@@ -151,7 +185,12 @@ html
         max-width: 300px;
         height: auto;
     }
-    .cap__overlay
+    .cap__info
+    {
+        top: 350px; 
+        left: 10%;
+    }
+    #mask
     {
         display: none;
     }

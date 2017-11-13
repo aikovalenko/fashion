@@ -17,6 +17,11 @@
 html {
   font-size: 100%;
   //font-family: 'GMTypewriter', Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  margin: 0;
 }
 
 .cap {
@@ -55,6 +60,26 @@ html {
     top: 0;
     left: 0;
     z-index: 2;
+  }
+
+  &__info {
+    left: calc(30.8% + 190px);
+    top: 62.3%;
+    position: absolute;
+    z-index: 99;
+
+    font-size: 20px;
+
+    p {
+      line-height: 30px;
+    }
+
+    &__dev {
+      margin-bottom: 10px;
+    }
+    &__name {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -110,6 +135,10 @@ html {
       left: 0;
       z-index: 2;
     }
+    &__info {
+      left: 41.8%;
+      top: 37.3%;
+    }
   }
   .square {
     width: 150px;
@@ -136,7 +165,8 @@ html {
   .cap {
 
     &__logo {
-      position: static;
+      top: 0;
+      left: 0;
       width: auto;
       height: auto;
       margin-top: 100px;
@@ -151,8 +181,16 @@ html {
       }
     }
     &__overlay {
-      display: none;
+
     }
+
+    &__info {
+      left: 10%;
+      top: 350px;
+    }
+  }
+  #mask {
+    display: none;
   }
 }
 
